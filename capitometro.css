@@ -1,0 +1,90 @@
+body {
+  color: white;
+  background-color: rgb(27, 27, 27);
+  font-family: Arial, sans-serif;
+  text-align: center;
+  font-size: 32px;
+  margin: 80px;
+}
+
+.brazil-image {
+  position: absolute; /* Permite posicionar a imagem em relação à tela */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Ocupa 100% da largura da tela */
+  height: 35vh; /* Ocupa 100% da altura da tela */
+  object-fit: cover; /* Cobre toda a área sem distorcer a proporção da imagem */
+  z-index: -1; /* Joga a imagem para trás de todo o conteúdo */
+  pointer-events: none; /* Impede que a imagem interfira em cliques ou interações */
+}
+
+h1 {
+  font-size: 100px;
+  margin: 10px;
+}
+
+.nome {
+  font-family: "UnifrakturMaguntia", cursive, serif;
+  font-size: 48px;
+  margin: 10px;
+}
+
+.capitan-image {
+  display: block;
+  margin: 0 auto;
+  width: 250px;
+  height: auto;
+  border-radius: 50%;
+  border: 5px solid rgb(0, 255, 0);
+}
+
+div a {
+  font-size: 16px;
+  display: inline-block;
+  margin: 30px;
+  padding: 20px;
+  background-color: rgb(111, 111, 111);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 2px solid rgb(173, 173, 173);
+}
+
+.gastos {
+  background-color: black;
+  color: rgb(0, 255, 0);
+  font-size: 64px;
+  margin-top: 20px;
+  border: 5px solid rgb(0, 255, 0);
+  display: inline-block;
+  padding: 5px 200px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.lista {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+}
+
+.i1 {
+  display: inline-block;
+  width: 10px; /* Espessura da linha */
+  background-color: rgb(0, 255, 0); /* Cor da linha */
+  margin: 0 8px; /* Espaçamento ao redor da linha (opcional) */
+  margin-left: auto;
+}
+.i2 {
+  font-size: 32px;
+  text-align: left;
+  display: inline-block;
+  margin: 30px;
+  padding: 20px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 10px;
+  border: 3px solid rgb(0, 255, 0);
+}

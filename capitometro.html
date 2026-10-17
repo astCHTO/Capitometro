@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capitômetro</title>
+  <link rel="stylesheet" href="capitometro.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <audio autoplay loop controls> <!--- autoplay loop controls-->
+    <source src="brimp.mp3" type="audio/mpeg">
+    Seu navegador não suporta o elemento de áudio.
+  </audio>
+
+  <img src="brasil.jpg" alt="brasil" class="brazil-image">
+  <img src="capitan.jpg" alt="Capitan" class="capitan-image">
+  <h1>CAPITÔMETRO</h1>
+  <div>MEDINDO QUANTO O CAPITÃO JÁ GASTOU PARA OPRIMIR MINORIAS</div>
+  <div class="nome">Flavio Bolsonaro</div>
+  <div class="gastos">R$ 2634000,00</div>
+  <div>
+    <a href="pdia.html">PRIMEIRO DIA DE <br>MANDATO DO CAPITÃO</a>
+    <a href="processo.html">ACOMPRANHE<br>O PROCESSO</a>
+    <a href="comemoracao.html">COMEMORAÇÃO DIA <br>NO 5 DE JANEIRO</a>
+  </div>
+
+  <div>Esta plataforma tem o objetivo de divulgar todos os gastos feitos com dinheiro público pelo Capitão Bolsonaro para transformar o Perfeitil em Primeiro Mundo. Segue agora a lista de suas ações:</div>
+  <br>
+  <div class="lista">
+    <div class="i1"></div>
+    <div class="i2">Acabou com o Voto Feminino</div>
+  </div>
+  <div class="lista">
+    <div class="i1"></div>
+    <div class="i2">Prendeu todos os Gays em campos de concentração</div>
+  </div>
+  <div class="lista">
+    <div class="i1"></div>
+    <div class="i2">Aprovou a escala 7x0</div>
+  </div>
+  <div class="lista">
+    <div class="i1"></div>
+    <div class="i2">Revogou a Lei Áurea</div>
+  </div>
+  </div>
+  <div class="lista">
+    <div class="i1"></div>
+    <div class="i2">Extinguiu os Yanumami</div>
+  </div>
+  </div>
+  <div class="lista">
+    <div class="i1"></div>
+    <div class="i2">Privatizou o SUS</div>
+  </div>
+  </div>
+  <div class="lista">
+    <div class="i1"></div>
+    <div class="i2">Desanexou o Nordeste</div>
+  </div>
+  <div class="lista">
+    <div class="i1"></div>
+    <div class="i2">Vendeu o Brasil para o United States of America</div>
+  </div>
+  <div class="lista">
+    <div class="i1"></div>
+    <div class="i2">Privatizou as escolas</div>
+  </div>
+  <div class="lista">
+    <div class="i1"></div>
+    <div class="i2">Fechou as Faculdades públicas</div>
+  </div>
+
+  <script>
+    // Seleciona a div
+    const divGastos = document.querySelector('.gastos');
+
+    // Função auxiliar para transformar a string "R$ 1.000.000,00" em um número (1000000.00)
+    function parseMoeda(texto) {
+      // Remove "R$", espaços, pontos de milhar e substitui a vírgula decimal por ponto
+      const apenasNumeros = texto
+        .replace('R$', '')
+        .trim()
+        .replace(/\./g, '')
+        .replace(',', '.');
+      return parseFloat(apenasNumeros);
+    }
+
+    // Função para formatar um número para o padrão monetário brasileiro
+    function formatarMoeda(valor) {
+      return valor.toLocaleString('pt-BR', {
+        style: 'currency',
+        currency: 'BRL'
+      });
+    }
+
+    // Executa a cada 1 segundo (1000 milissegundos)
+    setInterval(() => {
+      // 1. Pega o valor atual da div
+      const valorAtual = parseMoeda(divGastos.textContent);
+
+      // 2. Aumenta em 10% (multiplica por 1.1)
+      const novoValor = valorAtual * 1.01;
+
+      // 3. Atualiza o texto da div com o novo valor formatado
+      divGastos.textContent = formatarMoeda(novoValor);
+    }, 100);
+  </script>
+</body>
+
+</html>
