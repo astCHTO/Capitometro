@@ -1,0 +1,36 @@
+body {
+  color: white;
+  background-color: rgb(27, 27, 27);
+  font-family: Arial, sans-serif;
+  text-align: center;
+  font-size: 32px;
+  margin: 80px;
+}
+
+a {
+  font-size: 32px;
+  display: inline-block;
+  margin: 30px;
+  padding: 20px;
+  background-color: rgb(111, 111, 111);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 2px solid rgb(173, 173, 173);
+}
+
+.vid {
+  border: 5px solid rgb(0, 255, 0);
+  border-radius: 20px;
+}
+
+.vid2 {
+  border: 5px solid rgb(0, 255, 0);
+  border-radius: 20px;
+  width: 600px; /* 1. Defina o tamanho exato da "janela" que você quer exibir */
+  height: 600px;
+  object-fit: cover; /* 2. Faz o vídeo preencher o espaço e cortar o excesso */
+  object-position: center center; /* 3. Garante o alinhamento exatamente no centro */
+  border-radius: 8px; /* Opcional: deixa o player redondo */
+}
